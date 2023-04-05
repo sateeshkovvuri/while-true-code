@@ -1,0 +1,16 @@
+#questions{
+    margin:10px;
+}
+
+.question{
+    margin:2px;
+}
+
+#contenders{
+    margin:10px;
+}
+
+textarea{
+    height: 75px;
+    resize: none;
+}

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>manage</title>
+        <link rel="stylesheet" href="../contest/manage.css">
+    </head>
+
+    <body>
+      <div>manage your contests here</div>
+      
+      <%for (let id in data[0]) {%>
+        <div class="contests">
+          <span class="contest_name">
+        <%if(data[0][id][0]==null){%>
+        <%=id%>
+        
+        <%}else{%>
+          <%=data[0][id][0]%>
+        <%}%>
+          </span>
+
+          <span id="duration"><%=data[0][id][2][0]%> days, <%=data[0][id][2][1]%> hours, <%=data[0][id][2][2]%> minutes,<%=data[0][id][2][3]%> seconds </span>
+
+          <div class="controls">
+          <%if(data[0][id][1]!="configuring"){%>
+          <span>
+            <form <%if (data[0][id][1]=="ready"){%> action="http://localhost:3769/manage/<%=id%>/start" method="post" <%}else if(data[0][id][1]=="online" && (data[1] >= data[0][id][3])){%>action="http://localhost:3769/manage/<%=id%>/result" method="post" <%}%> style="display: inline;">
+              <input type="submit" value=<%if(data[0][id][1]=="ready"){%>"start"<%}else if(data[0][id][1]=="online"){%> "results"<%}%> <%if(data[0][id][1]=="online" && (data[1] < data[0][id][3])){%>disabled<%}%>>
+            </form>
+            <%if(data[0][id][1]=="online" && (data[1] < data[0][id][3])){%>
+              results will be available from : <%=data[0][id][4]%>  
+            <%}%>
+          </span>
+          <%}%>
+          
+
+          <%if(data[0][id][1]!="online"){%>
+          <span><a href="http://localhost:3769/contest/<%=id%>/configure"><button>configure</button></a></span>
+          
+            <form action="http://localhost:3769/manage/delete" method="post" style="display: inline;">
+              <input type="submit" name="<%=id%>" value="delete">
+            </form>
+          <%}%>
+          </div>
+          
+        </div>
+      <%}%>
+    </body>
+</html>
