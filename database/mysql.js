@@ -3,9 +3,9 @@ const mysql=require("mysql")
 
 let con = mysql.createConnection({
   host: "localhost",
-  user: "sateesh",
-  password: "25050023",
-  database:"whiletruecode"
+  user: "your user name",
+  password: "your password",
+  database:"your database"
 
 });
 
