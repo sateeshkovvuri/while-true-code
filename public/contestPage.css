@@ -1,0 +1,50 @@
+body{
+    margin-top: 0px;
+    
+}
+
+#contestName{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:black;
+    color:aliceblue;
+    min-height:75px;
+    padding:20px;
+    min-width: 1000px;
+}
+
+#creator{
+    font-size:20px;
+    margin-top:25px;
+}
+
+#questions{
+    margin:10px 0px 10px 0px;
+    border:1px solid black;
+    padding:10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.questionName{
+    margin-bottom: 5px;
+}
+
+#timerDisplay{
+ font-family: 'Times New Roman', Times, serif;   
+}
+
+#timer{
+    margin-bottom: 5px;
+}
+
+#contestDesc{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2{
+    margin-bottom: 2px;
+}
