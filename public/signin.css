@@ -1,0 +1,92 @@
+body{
+    height:100vh;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+.msg {
+    width:300px;
+    height:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+    color:white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    border: 5px solid black;
+    padding:20px;
+}
+
+label{
+    margin:10px 0px 10px 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+
+input{
+    width: 250px;
+    height:45px;
+    font-weight: 400;
+    text-align: center;
+    
+}
+
+#submit{
+    margin:30px 0px 10px 0px;
+    background-color: black;
+    color: gainsboro;
+    border: 0px;
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#visibilitylab{
+    font-weight: 500;
+    margin:15px 0px 0px 5px;
+}
+
+#visibility{
+    width:fit-content;
+}
+
+#visibilityDis{
+    display: flex;
+}
+
+#branding{
+    position: absolute;
+    top: 0;
+    width:100vw;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: larger;
+    margin:-8px -8px 5px -8px;
+}

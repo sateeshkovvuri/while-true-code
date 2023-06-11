@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>contest</title>
+        <link rel="stylesheet" href="../contestPage.css">
+    </head>
+
+    <body>
+        <div id="contestName">
+            <span><%=contestDetails.contestName%></span> <a target ="_blank" href="https://auth.geeksforgeeks.org/user/<%=contestDetails.creator%>" id="creator"> <i>(by <%=contestDetails.creator%>)</i>  </a>
+        </div>
+        <div id="questions">
+            <h3>Questions: </h3>
+            <ol>
+            <% for (question in contestDetails.questions){%>
+                <div class="questionname"><a target="_blank"  href=<%=contestDetails.questions[question].problem_link%>>  <li><%= question%> <i>(<%=contestDetails.questions[question].points%> points)</i></li> </a></div>
+            <%}%>
+            </ol>
+        </div>
+
+        <div id="timerDisplay">
+            <div id="timer"></div>
+            <div>
+                contest is live till : 
+                <div id="endTime" style="display: inline;"><%=contestDetails.endTime%></div>
+            </div>
+        </div>
+
+        <div id="contestDesc">
+            <% if(contestDetails.contestDesc != "") {%>
+                <h2>contest description :</h2>
+                <%= contestDetails.contestDesc %>
+            <%}%>
+        </div>
+
+        <script src="../contestPage.js"></script>
+    </body>
+</html>

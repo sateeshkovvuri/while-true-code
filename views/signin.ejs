@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            sign in
+        </title>
+
+        <link rel="stylesheet" href="signin.css">
+    </head>
+
+    <body>
+        <div id="branding"><h2>While True Code</h2> </div>
+        <div id="msg"></div>
+        <form action="<%=host%>authenticate" method="dialog">
+            <label for="username">GFG User Handle</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            
+            <div id="visibilityDis">
+                <input type="checkbox" id="visibility"> <label for="visibility" id="visibilitylab">show password</label>
+            </div>
+
+            <input type="submit" id="submit" value="Sign in">
+
+            <a href="<%=host%>verify">forgot password / dont have an account?</a>
+
+            <script src="signin.js"></script>
+        </form>
+    </body>
+</html>
