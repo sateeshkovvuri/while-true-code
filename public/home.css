@@ -1,0 +1,62 @@
+#dashboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+}
+
+#branding{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#btns{
+    display: flex;
+    position: absolute;
+    right: 0px;
+}
+
+.btn{
+    background-color: whitesmoke;
+    color:black;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:10px;
+    width:100px;
+}
+
+
+body{
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.activity{
+    width:400px;
+    height:150px;
+    background-color: steelblue;
+    margin: 30px;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity:hover{
+    border:5px solid black;
+}

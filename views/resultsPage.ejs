@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>results</title>
+        <link rel="stylesheet" href="../resultsPage.css">
+    </head>
+
+    <body>
+
+        <div id="contestName">
+            <span><%=contestName%></span> <a target ="_blank" href="https://auth.geeksforgeeks.org/user/<%=creator%>" id="creator"> <i>(by <%=creator%>)</i>  </a>
+        </div>
+
+        <h2>
+            Results :
+        </h2>
+
+        <table>
+            <tr>
+                <th>position</th>
+                <th>contender</th>
+                <%for(let question in questionWiseReport){%>
+                    <th><%= question%></th>
+                <%}%>
+            </tr>
+        <%for(let contender in scoreBoard){%>
+            <tr>
+                <td><strong><%= Number(contender)+1 %></strong></td>
+                <td class="contender"><strong><%= scoreBoard[contender] %></strong></td>
+                <%for(let question in questionWiseReport){%>
+                    <%if(questionWiseReport[question][scoreBoard[contender]].subtime == 1e60){%>
+                        <td class="noCrtSub">no submissions</td>
+                    <%}else{%>
+                        <td><span class="passedTestcases"><%= questionWiseReport[question][scoreBoard[contender]].testcase_passed%></span>/<%= questionWiseReport[question][scoreBoard[contender]].total_testcase_count%> <br> <span class="subTime"><%= new Date(questionWiseReport[question][scoreBoard[contender]].subtime)%> [ <strong><i>score : <%=questions[question].points*(questionWiseReport[question][scoreBoard[contender]].testcase_passed/questionWiseReport[question][scoreBoard[contender]].total_testcase_count)%>/<%=questions[question].points%></i></strong> ]</span></td>
+                    <%}%>
+                    
+                <%}%>
+            </tr>
+        <%}%>
+        </table>
+    </body>
+</html>

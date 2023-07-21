@@ -1,10 +1,31 @@
 <html>
     <head>
-        <title>home</title>
+        <title>
+            home
+        </title>
+        <link rel="stylesheet" href="home.css">
     </head>
 
     <body>
-        <a href="http://localhost:3769/contest/start"><button>start contest</button></a>
-        <a href="http://localhost:3769/manage"><button>manage contests</button></a>
+        <div id="branding"><h2>While True Code</h2> 
+            <div id="btns">
+                <a href="<%=host%>signout"><div class="btn">Sign Out</div></a>
+            </div>
+        </div>
+        
+        <div id="dashboard">
+            <a href="<%=host%>create">
+                <div class="activity">create contest</div>
+            </a>
+            
+            <a href="<%=host%>registeredContests">
+                <div class="activity">registered contests</div>
+            </a>
+            
+            <a href="<%=host%>mycontests">
+                <div class="activity">contests you created</div>
+            </a>
+        </div>
+        
     </body>
 </html>
